@@ -3,7 +3,7 @@
 [//]: # (Fine-tuned diffusion model trained to extract style patterns from a small set of samples by an artist.)
 
 
-The goal of this project is to present how to extract style patterns from a limited set of samples from an artist. Current baseline solution is based on the Dreambooth technique for fine-tuning diffusion models (see the paper: [DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation](https://arxiv.org/pdf/2208.12242)).
+The goal of this project is to demonstrate how to extract style patterns from a limited set of samples from an artist. The current baseline solution is based on the Dreambooth technique for fine-tuning diffusion models (see the paper: [DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation](https://arxiv.org/pdf/2208.12242)).
 
 #### Source Data
 
@@ -20,7 +20,7 @@ The goal of this project is to present how to extract style patterns from a limi
 
 ### Code
 
-The training and inference code is available in the `./scripts` directory. The scripts are reproducible in a Google Colab notebook with a T4 GPU.
+The training and inference code is available in the `./scripts` directory. The scripts are reproducible in a `Google Colab` notebook with a T4 GPU.
 
 ### Training Configurations
 
