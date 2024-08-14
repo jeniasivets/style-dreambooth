@@ -1,9 +1,6 @@
 ## Style-Dreambooth
 
-[//]: # (Fine-tuned diffusion model trained to extract style patterns from a small set of samples by an artist.)
-
-
-The goal of this project is to demonstrate how to extract style patterns from a limited set of samples from an artist. The current baseline solution is based on the Dreambooth technique for fine-tuning diffusion models (see the paper: [DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation](https://arxiv.org/pdf/2208.12242)).
+The objective of this project is to demonstrate how to extract stylistic patterns from a limited set of samples from an artist. The current baseline solution is based on the Dreambooth technique for fine-tuning diffusion models (please refer to the paper: [DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation](https://arxiv.org/pdf/2208.12242)).
 
 #### Source Data
 
@@ -20,7 +17,7 @@ The goal of this project is to demonstrate how to extract style patterns from a 
 
 ### Code
 
-The training and inference code is available in the `./scripts` directory. The scripts are reproducible in a `Google Colab` notebook with a T4 GPU.
+The training and inference code is available in the `./scripts` directory. These scripts are designed to be reproducible in a `Google Colab` notebook with a T4 GPU.
 
 ### Training Configurations
 
@@ -63,21 +60,20 @@ accelerate launch train_dreambooth.py \
 ### Tech report & notes
 #### Experiments
 
-I conducted a set of experiments to analyze the effect of different settings, including:
+A series of experiments were conducted to analyze the effects of various settings, including:
 
-- Changing the number of training steps and the learning rate.
-- Modifying the class prompt for prior preservation loss (e.g., using "portrait" instead of "artstyle") and adjusting the number of generated class images.
-
-Additional steps that can be taken beyond the experiments described above include changing the backbone of the pretrained model.
+- Adjusting the number of training steps and the learning rate.
+- Modifying the class prompt for prior preservation loss (e.g., substituting "artstyle" with "portrait") and adjusting the number of generated class images.
+- Further enhancements can include changing the backbone of the pre-trained model.
 
 
 #### Common Observations
+Several key observations were made during the experiments:
 
-- The model can overfit with more training steps and may start to generate similar objects (e.g., this is noticeable with 1600 steps).
-- Training the text encoder alongside the UNet helps improve results.
-- Using regularization images and prior preservation loss enhances performance.
+- The model tends to overfit with an increased number of training steps, resulting in the generation of similar objects (e.g., this is noticeable with 1600 steps).
+- Training the text encoder alongside the UNet contributes to improved results.
+- Using regularization images and prior preservation loss significantly enhances performance.
 
 
 #### Failure Cases
-
-I observed issues with generating multiple objects, such as "girl and a boy" or "man with a dog." I propose that this can be addressed, for instance, using ControlNet techniques or by adding extra conditions during inference. For example, we can pass reference conditions like image sketches with a rough outline of the desired arrangement of objects.
+Challenges were noted in generating multiple objects, such as "girl and a boy" or "man with a dog." Potential solutions to address this issue include employing ControlNet techniques or incorporating additional conditions during inference. For instance, we can utilize reference conditions such as image sketches with rough outlines of the desired arrangement of objects.
