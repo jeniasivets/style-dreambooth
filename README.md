@@ -8,15 +8,15 @@ The goal of this project is to present how to extract style patterns from a limi
 #### Source Data
 
 <p float="left">
-  <img title="a title" alt="Alt text" src="data/train/03.jpg" width="100"> 
-  <img title="a title" alt="Alt text" src="data/train/04.jpg" width="100"> 
-  <img title="a title" alt="Alt text" src="data/train/05.jpg" width="100"> 
-<img title="a title" alt="Alt text" src="data/train/07.jpg" width="100"> 
+  <img src="data/train/03.jpg" width=20%>
+  <img src="data/train/04.jpg" width=20%> 
+  <img src="data/train/05.jpg" width=20%> 
+  <img src="data/train/07.jpg" width=20%> 
 </p>
 
 #### Generated Samples
-<img title="a title" alt="Alt text" src="data/generated/a_boy.png">
-<img title="a title" alt="Alt text" src="data/generated/a_girl.png">
+<img src="data/generated/a_boy.png">
+<img src="data/generated/a_girl.png">
 
 ### Code
 
