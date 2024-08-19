@@ -15,7 +15,7 @@ The objective of this project is to demonstrate how to extract stylistic pattern
 <img src="data/generated/a_boy.png">
 <img src="data/generated/a_girl.png">
 
-### Code
+### Implementation
 
 The training and inference code is available in the `./scripts` directory. These scripts are designed to be reproducible in a `Google Colab` notebook with a T4 GPU.
 
